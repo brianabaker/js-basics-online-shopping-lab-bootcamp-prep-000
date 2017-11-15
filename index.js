@@ -8,23 +8,52 @@ function setCart(c) {
   cart = c;
   return cart;
 }
+var itemPrice = Math.floor(Math.random()*100)
 
-function addToCart(item) {
- // write your code here
+function addToCart(itemName){
+  //create a new object from the item
+  //item.
+  var itemPrice = Math.floor(Math.random()*100)
+  var newObj = { [itemName]: itemPrice};
+  cart.push(newObj);
+  console.log(`${[itemName]} has been added to your cart.`)
+  return cart;
+}
+//<itemName> has been added to your cart.
+
+// addToCart("pizza");
+// addToCart("rubber bands");
+// addToCart("doritos");
+
+// function viewCart(){
+//   loops over every item = for loop
+//   prints out contents in one long sentence.
+//   commas in between and a period at the end.
+//   if empty PRINTS "Your shopping cart is empty."
+// // }
+//
+
+function viewCart(){
+  var line = "In your cart, you have "
+  if (cart.length === 0){
+    console.log("Your shopping cart is empty.")
+  } else {
+    /// argh
+    // okay so loop through it
+    var position = cart[i]
+    var myKeys = Object.keys(position)
+    var items = myKeys[0]
+    for (var i = 0; i < cart.length; i++){
+      line += `${cart[i]} at ${myKeys[items]} `
+
+}
+console.log(line);
+}
 }
 
-function viewCart() {
-  // write your code here
-}
-
-function total() {
-  // write your code here
-}
-
-function removeFromCart(item) {
-  // write your code here
-}
-
-function placeOrder(cardNumber) {
-  // write your code here
-}
+  //
+  // }else if (cart.length === 2){
+  //   return `${itemName} at ${itemPrice}.`
+  // } else if cart.
+  // for (var i = 0; i < cart.length; i++){
+  // `In your cart, you have ${itemName} at ${itemPrice} `
