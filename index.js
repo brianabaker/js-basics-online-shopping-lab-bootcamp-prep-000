@@ -38,13 +38,11 @@ function viewCart(){
   if (cart.length === 0){
     console.log("Your shopping cart is empty.")
   } else {
-    /// argh
-    // okay so loop through it
-    var position = cart[i]
-    var myKeys = Object.keys(position)
-    var items = myKeys[0]
-    for (var i = 0; i < cart.length; i++){
-      line += `${cart[i]} at ${myKeys[items]} `
+    for (var i = 0; i < cart.lenth; i++){
+      for (var index in data[index]){
+        line += ${cart[i]} at ${data[index]}
+      }
+    }
 
 }
 console.log(line);
